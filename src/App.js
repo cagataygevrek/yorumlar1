@@ -1,5 +1,7 @@
 import React from "react";
 import Review from "./Review";
+
+// App adında oluşturulan componentin içine başlık eklendikten sonra Review componenti import edilmiş.
 function App() {
   return (
     <main>
