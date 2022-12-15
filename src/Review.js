@@ -14,8 +14,8 @@ const Review = () => {
 
   // console.log(people);
 
-  // checkNumber adında component oluşturulmuş. Number parametresi verilmiş.
-  // number parametresi, veri dosyasındaki (data.js) kişi sayısından büyükse 1 çıkarılıp render edilmiş.
+  // checkNumber adında fonksiyon oluşturularak kişiler (veriler) numaralandırılmış.
+  // fonksiyondaki number parametresi, veri dosyasındaki (data.js) kişi sayısından büyükse 1 çıkarılıp render edilmiş.
   const checkNumber = (number) => {
     if (number > people.length - 1) {
       return 0;
@@ -28,33 +28,33 @@ const Review = () => {
     return number;
   };
 
-  // nextPerson adında component oluşturulmuş.
-  // indexteki sağdaki butona  ">" tıklayınca aktif indexe 1 ekleyerek yeni kişi verisi setIndex ile aktarılmış.
+  // nextPerson adında fonksiyon oluşturulmuş.
+  // indexteki sağdaki butona  ">" (return kısmındaki <FaChevronLeft />) tıklayınca aktif indexe 1 ekleyerek yeni kişi verisi setIndex ile aktarılmış.
   // Bunu setindex'in parametresini index ile belirleyip oluşturduğu newIndex değişkenine 1 ekleyerek sağlamış.
   const nextPerson = () => {
     setIndex((index) => {
       // newIndex adında değişken oluşturulup sonraki sayfadaki verileri almak için index'e "+1" eklenmiş.
       let newIndex = index + 1;
 
-      // (checkNumber component'ına yeni sayfa(newIndex) render edilmiş.)
+      // (checkNumber fonksiyonuuına yeni sayfa(newIndex) render edilmiş.)
       return checkNumber(newIndex);
     });
   };
 
-  // prevPerson adında component oluşturulmuş.
-  // indexteki soldaki butona "<" tıklayınca indexten 1 çıkartarak sayfaya yeni veri setIndex ile aktarılmış.
+  // prevPerson adında fonksiyon oluşturulmuş.
+  // indexteki soldaki butona "<" (return kısmındaki <FaChevronRight />) tıklayınca indexten 1 çıkartarak sayfaya yeni veri setIndex ile aktarılmış.
   // Bunu setindex'in parametresini index ile belirleyip oluşturduğu newIndex değişkeninden 1 çıkartarak sağlamış.
   const prevPerson = () => {
     setIndex((index) => {
       // newIndex adında değişken oluşturulup önceki sayfadaki veri almak için index'ten "-1" çıkarılmış.
       let newIndex = index - 1;
 
-      // (checkNumber component'ına yeni sayfa (newIndex) render edilmiş.)
+      // (checkNumber fonksiyonuna yeni sayfa (newIndex) render edilmiş.)
       return checkNumber(newIndex);
     });
   };
 
-  // randomPerson adında bir functional component oluşturulmuş.
+  // randomPerson adında fonksiyon oluşturulmuş.
   // randomNumber değişkeninde math.round işleviyle obje içerisindeki veri uzunluğu kadar rastgele sayı üretilip (4) setIindex'e aktarılarak ekrandaki kişi güncellenmiş.
   const randomPerson = () => {
     let randomNumber = Math.floor(Math.random() * people.length);
