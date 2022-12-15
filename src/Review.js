@@ -29,7 +29,7 @@ const Review = () => {
   };
 
   // nextPerson adında fonksiyon oluşturulmuş.
-  // indexteki sağdaki butona  ">" (return kısmındaki <FaChevronLeft />) tıklayınca aktif indexe 1 ekleyerek yeni kişi verisi setIndex ile aktarılmış.
+  // indexteki sağdaki butona  ">" (return kısmındaki <FaChevronRight />) tıklayınca aktif indexe 1 ekleyerek yeni kişi verisi setIndex ile aktarılmış.
   // Bunu setindex'in parametresini index ile belirleyip oluşturduğu newIndex değişkenine 1 ekleyerek sağlamış.
   const nextPerson = () => {
     setIndex((index) => {
@@ -42,7 +42,7 @@ const Review = () => {
   };
 
   // prevPerson adında fonksiyon oluşturulmuş.
-  // indexteki soldaki butona "<" (return kısmındaki <FaChevronRight />) tıklayınca indexten 1 çıkartarak sayfaya yeni veri setIndex ile aktarılmış.
+  // indexteki soldaki butona "<" (return kısmındaki <FaChevronLeft />) tıklayınca indexten 1 çıkartarak sayfaya yeni veri setIndex ile aktarılmış.
   // Bunu setindex'in parametresini index ile belirleyip oluşturduğu newIndex değişkeninden 1 çıkartarak sağlamış.
   const prevPerson = () => {
     setIndex((index) => {
